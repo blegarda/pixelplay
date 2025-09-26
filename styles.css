@@ -219,10 +219,6 @@ footer {
 
 /* Responsivo */
 @media (max-width: 768px) {
-  #busqueda {
-    display: none;
-  }
-
   .solo-categorias {
     display: block;
   }

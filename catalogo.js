@@ -37,11 +37,6 @@ function renderizarCatalogo() {
 
   const filtrados = productos.filter(p => {
     const coincideTipo = tipoActivo === 'Todos' || p.tipo === tipoActivo;
-
-    if (esMovil) {
-      return coincideTipo; // solo filtra por categoría en móviles
-    }
-
     const nombre = normalizar(p.nombre);
     const tipo = normalizar(p.tipo);
     const mensaje = normalizar(p.mensaje || '');
@@ -108,7 +103,7 @@ botones.forEach(btn => {
   });
 });
 
-// Búsqueda en tiempo real (solo en escritorio)
+// Búsqueda en tiempo real
 if (window.innerWidth > 768) {
   busqueda.addEventListener('input', renderizarCatalogo);
 }
