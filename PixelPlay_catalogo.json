@@ -19,7 +19,7 @@
     "codigo": 1023,
     "tipo": "Individual",
     "nombre": "Netflix Generica",
-    "precio": "$14.900",
+    "precio": "$13.500",
     "imagen": "img/netflix.png",
     "mensaje": "Hola, me interesa la cuenta Netflix Generica"
   },
@@ -27,7 +27,7 @@
     "codigo": 1024,
     "tipo": "Individual",
     "nombre": "Netflix Original",
-    "precio": "$15.900",
+    "precio": "$14.900",
     "imagen": "img/netflix.png",
     "mensaje": "Hola, me interesa la cuenta Netflix Original"
   },
@@ -35,7 +35,7 @@
     "codigo": 1025,
     "tipo": "Individual",
     "nombre": "Netflix Original 33 Días",
-    "precio": "$16.900",
+    "precio": "$15.900",
     "imagen": "img/netflix.png",
     "mensaje": "Hola, me interesa la cuenta Netflix Original 33 Días"
   },
@@ -43,7 +43,7 @@
     "codigo": 1026,
     "tipo": "Completa",
     "nombre": "Crunchyroll Completo",
-    "precio": "$12.000",
+    "precio": "$10.900",
     "imagen": "img/crunchyroll.png",
     "mensaje": "Hola, me interesa la cuenta Crunchyroll Completo"
   },
@@ -51,7 +51,7 @@
     "codigo": 1027,
     "tipo": "Individual",
     "nombre": "Crunchyroll Pantalla",
-    "precio": "$10.900",
+    "precio": "$6.900",
     "imagen": "img/crunchyroll.png",
     "mensaje": "Hola, me interesa la cuenta Crunchyroll Pantalla"
   },
@@ -59,7 +59,7 @@
     "codigo": 1028,
     "tipo": "Completa",
     "nombre": "Disney Completa",
-    "precio": "$18.900",
+    "precio": "$13.500",
     "imagen": "img/disney.png",
     "mensaje": "Hola, me interesa la cuenta Disney Completa"
   },
@@ -67,7 +67,7 @@
     "codigo": 1029,
     "tipo": "Completa",
     "nombre": "Disney Premium Completa",
-    "precio": "$32.900",
+    "precio": "$27.900",
     "imagen": "img/disney.png",
     "mensaje": "Hola, me interesa la cuenta Disney Premium Completa"
   },
@@ -75,7 +75,7 @@
     "codigo": 1030,
     "tipo": "Individual",
     "nombre": "Disney Premium Pantalla",
-    "precio": "$12.900",
+    "precio": "$10.900",
     "imagen": "img/disney.png",
     "mensaje": "Hola, me interesa la cuenta Disney Premium Pantalla"
   },
@@ -83,7 +83,7 @@
     "codigo": 1031,
     "tipo": "Individual",
     "nombre": "Disney Plus Pantalla",
-    "precio": "$8.900",
+    "precio": "$7.900",
     "imagen": "img/disney.png",
     "mensaje": "Hola, me interesa la cuenta Disney Plus Pantalla"
   },
@@ -91,7 +91,7 @@
     "codigo": 1032,
     "tipo": "Completa",
     "nombre": "HBO Max Estandar Completa",
-    "precio": "$18.000",
+    "precio": "$14.900",
     "imagen": "img/hbo.png",
     "mensaje": "Hola, me interesa la cuenta HBO Max Estandar Completa"
   },
@@ -99,7 +99,7 @@
     "codigo": 1033,
     "tipo": "Individual",
     "nombre": "HBO Max Estandar Pantalla",
-    "precio": "$10.900",
+    "precio": "$8.900",
     "imagen": "img/hbo.png",
     "mensaje": "Hola, me interesa la cuenta HBO Max Estandar Pantalla"
   },
@@ -107,7 +107,7 @@
     "codigo": 1034,
     "tipo": "Completa",
     "nombre": "HBO Max Platino Completa",
-    "precio": "$20.000",
+    "precio": "$16.900",
     "imagen": "img/hbo.png",
     "mensaje": "Hola, me interesa la cuenta HBO Max Platino Completa"
   },
@@ -115,7 +115,7 @@
     "codigo": 1035,
     "tipo": "Individual",
     "nombre": "HBO Max Platino Pantalla",
-    "precio": "$12.900",
+    "precio": "$10.900",
     "imagen": "img/hbo.png",
     "mensaje": "Hola, me interesa la cuenta HBO Max Platino Pantalla"
   },
@@ -123,7 +123,7 @@
     "codigo": 1036,
     "tipo": "Completa",
     "nombre": "Paramount Completa",
-    "precio": "$14.000",
+    "precio": "$10.900",
     "imagen": "img/paramount.svg",
     "mensaje": "Hola, me interesa la cuenta Paramount Completa"
   },
@@ -131,15 +131,15 @@
     "codigo": 1037,
     "tipo": "Individual",
     "nombre": "Paramount Pantalla",
-    "precio": "$8.900",
+    "precio": "$7.900",
     "imagen": "img/paramount.svg",
     "mensaje": "Hola, me interesa la cuenta Paramount Pantalla"
   },
   {
     "codigo": 1038,
     "tipo": "Completa",
-    "nombre": "Prime Video Cuenta",
-    "precio": "$18.000",
+    "nombre": "Prime Video Completa",
+    "precio": "$14.900",
     "imagen": "img/prime.png",
     "mensaje": "Hola, me interesa la cuenta Prime Video Cuenta"
   },
@@ -147,7 +147,7 @@
     "codigo": 1039,
     "tipo": "Individual",
     "nombre": "Prime Video Pantalla Original",
-    "precio": "$14.900",
+    "precio": "$10.900",
     "imagen": "img/prime.png",
     "mensaje": "Hola, me interesa la cuenta Prime Video Pantalla Original"
   },
@@ -155,7 +155,7 @@
     "codigo": 1040,
     "tipo": "Individual",
     "nombre": "Prime Video Pantalla",
-    "precio": "$12.000",
+    "precio": "$7.900",
     "imagen": "img/prime.png",
     "mensaje": "Hola, me interesa la cuenta Prime Video Pantalla"
   },
@@ -187,7 +187,7 @@
     "codigo": 1044,
     "tipo": "Completa",
     "nombre": "WIN Sports Online",
-    "precio": "$22.900",
+    "precio": "$21.900",
     "imagen": "img/win.png",
     "mensaje": "Hola, me interesa WIN Sports Online"
   },
@@ -419,7 +419,7 @@
     "codigo": 1073,
     "tipo": "Completa",
     "nombre": "Office 365 12 meses (1 Dispositivo)",
-    "precio": "$22.900",
+    "precio": "$18.900",
     "imagen": "img/office.png",
     "mensaje": "Hola, me interesa Office 365 por 12 meses para 1 dispositivo"
   },
@@ -427,7 +427,7 @@
     "codigo": 1074,
     "tipo": "Completa",
     "nombre": "Office 365 12 meses (5 Dispositivos)",
-    "precio": "$45.000",
+    "precio": "$35.900",
     "imagen": "img/office.png",
     "mensaje": "Hola, me interesa Office 365 por 12 meses para 5 dispositivos"
   },
@@ -571,7 +571,7 @@
     "codigo": 1092,
     "tipo": "Completa",
     "nombre": "PLEX Completa",
-    "precio": "$15.000",
+    "precio": "$13.900",
     "imagen": "img/plex.svg",
     "mensaje": "Hola, me interesa Plex Completa"
   },
@@ -579,7 +579,7 @@
     "codigo": 1093,
     "tipo": "Individual",
     "nombre": "PLEX Pantalla",
-    "precio": "$10.000",
+    "precio": "$8.900",
     "imagen": "img/plex.svg",
     "mensaje": "Hola, me interesa Plex por pantalla"
   },
@@ -587,7 +587,7 @@
     "codigo": 1094,
     "tipo": "Completa",
     "nombre": "Rakuten VIKI Cuenta",
-    "precio": "$10.000",
+    "precio": "$10.900",
     "imagen": "img/viki.png",
     "mensaje": "Hola, me interesa Rakuten VIKI Cuenta"
   },
@@ -595,7 +595,7 @@
     "codigo": 1095,
     "tipo": "Individual",
     "nombre": "Rakuten VIKI Pantalla",
-    "precio": "$7.000",
+    "precio": "$6.900",
     "imagen": "img/viki.png",
     "mensaje": "Hola, me interesa Rakuten VIKI por pantalla"
   },
@@ -603,7 +603,7 @@
     "codigo": 1096,
     "tipo": "Completa",
     "nombre": "VIX Cuenta",
-    "precio": "$12.900",
+    "precio": "$10.900",
     "imagen": "img/vix.svg",
     "mensaje": "Hola, me interesa VIX Cuenta"
   },
@@ -611,7 +611,7 @@
     "codigo": 1097,
     "tipo": "Individual",
     "nombre": "VIX Pantalla",
-    "precio": "$8.900",
+    "precio": "$6.900",
     "imagen": "img/vix.svg",
     "mensaje": "Hola, me interesa VIX por pantalla"
   }
