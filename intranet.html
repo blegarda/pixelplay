@@ -10,17 +10,19 @@
 
   <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="intranet.css" />
 
   <!-- Iconos -->
   <script src="https://kit.fontawesome.com/a2e0e6f91e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
   <!-- Vista de acceso -->
-  <div class="login-wrapper" id="loginView">
+  <div class="login-wrapper">
     <div class="login-box">
       <div class="login-left">
-        <img src="img/LogoPixel.PNG" alt="PixelPlay" class="logo-login" />
+        <a href="index.html">
+          <img src="img/LogoPixel.PNG" alt="PixelPlay" class="logo-login" />
+        </a>
         <h2>Acceso a la Intranet</h2>
         <form id="loginForm">
           <input type="text" id="usuario" placeholder="Usuario" required />
@@ -43,47 +45,7 @@
     </div>
   </div>
 
-  <!-- Vista del catálogo -->
-  <div id="catalogoView" style="display: none;">
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <img src="img/LogoPixel.PNG" alt="PixelPlay" />
-          <h1>PixelPlay</h1>
-        </div>
-
-        <div class="busqueda-header">
-          <div class="search-box">
-            <i class="fas fa-search"></i>
-            <input type="text" id="busqueda" placeholder="Buscar..." />
-          </div>
-        </div>
-
-        <div class="acceso-trabajadores">
-          <button class="login-btn" onclick="cerrarSesion()">Cerrar sesión</button>
-        </div>
-
-        <button id="menuToggle" class="hamburger"><i class="fas fa-bars"></i></button>
-        <div id="menuCategorias" class="menu-categorias">
-          <button data-tipo="Todos" class="active">Todos</button>
-          <button data-tipo="App">App</button>
-          <button data-tipo="Completa">Completa</button>
-          <button data-tipo="Individual">Individual</button>
-        </div>
-      </nav>
-    </header>
-
-    <main class="catalogo-wrapper">
-      <section id="catalogo" class="catalogo"></section>
-    </main>
-
-    <a href="https://wa.me/573246161953" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-  </div>
-
-  <!-- Scripts -->
+  <!-- Script de login -->
   <script src="catalogo.js"></script>
-  <script src="intranet.js"></script>
 </body>
 </html>

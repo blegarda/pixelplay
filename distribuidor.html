@@ -6,7 +6,7 @@
   <meta name="description" content="PixelPlay - Catálogo de cuentas de streaming con compra directa por WhatsApp." />
   <meta name="keywords" content="PixelPlay, streaming, cuentas, catálogo, WhatsApp, completa, duo, trio, super pack, mega pack, combo definitivo, audio, web, app" />
   <meta name="author" content="LegaCorp" />
-  <title>PixelPlay</title>
+  <title>PixelPlay | Distribuidor</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="img/icono.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,43 +18,42 @@
 
   <!-- === HEADER === -->
   <header>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="img/LogoPixel.PNG" alt="PixelPlay" />
-      <h1>PixelPlay</h1>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/LogoPixel.PNG" alt="PixelPlay" />
+        <h1>PixelPlay</h1>
+      </div>
+
+      <div class="busqueda-header">
+        <form id="busquedaForm">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="busqueda" placeholder="Buscar..." aria-label="Buscar producto" />
+          </div>
+        </form>
+      </div>
+
+      <div class="acceso-trabajadores">
+        <button onclick="window.location.href='intranet.html'" class="login-btn">Cerrar sesión</button>
+      </div>
+
+      <button id="menuToggle" class="hamburger" aria-label="Abrir menú">☰</button>
+    </nav>
+
+    <div id="menuCategorias" class="menu-categorias">
+      <button data-tipo="Todos" class="active">Todos</button>
+      <button data-tipo="Completa">Completa</button>
+      <button data-tipo="Individual">Individual</button>
+      <button data-tipo="Duo">Duo</button>
+      <button data-tipo="Trio">Trio</button>
+      <button data-tipo="Super Pack">Super Pack</button>
+      <button data-tipo="Mega Pack">Mega Pack</button>
+      <button data-tipo="Combo Definitivo">Combo Definitivo</button>
+      <button data-tipo="Audio">Audio</button>
+      <button data-tipo="Web">Web</button>
+      <button data-tipo="App">App</button>
     </div>
-
-    <div class="busqueda-header">
-      <form id="busquedaForm">
-        <div class="search-box">
-          <i class="fas fa-search"></i>
-          <input type="text" id="busqueda" placeholder="Buscar..." aria-label="Buscar producto" />
-        </div>
-      </form>
-    </div>
-
-    <div class="acceso-trabajadores">
-      <button onclick="window.location.href='intranet.html'" class="login-btn">Acceso</button>
-    </div>
-
-    <button id="menuToggle" class="hamburger" aria-label="Abrir menú">☰</button>
-  </nav>
-
-  <!-- ✅ Menú hamburguesa fuera del nav pero dentro del header -->
-  <div id="menuCategorias" class="menu-categorias">
-    <button data-tipo="Todos" class="active">Todos</button>
-    <button data-tipo="Completa">Completa</button>
-    <button data-tipo="Individual">Individual</button>
-    <button data-tipo="Duo">Duo</button>
-    <button data-tipo="Trio">Trio</button>
-    <button data-tipo="Super Pack">Super Pack</button>
-    <button data-tipo="Mega Pack">Mega Pack</button>
-    <button data-tipo="Combo Definitivo">Combo Definitivo</button>
-    <button data-tipo="Audio">Audio</button>
-    <button data-tipo="Web">Web</button>
-    <button data-tipo="App">App</button>
-  </div>
-</header>
+  </header>
 
   <!-- === MAIN === -->
   <main>
@@ -63,7 +62,6 @@
         <!-- Productos se cargan dinámicamente -->
       </section>
 
-      <!-- Banner nativo entre catálogo e institucional -->
       <div class="banner-native">
         <script type="text/javascript">
           atOptions = {
@@ -78,7 +76,6 @@
       </div>
     </section>
 
-    <!-- === INFO INSTITUCIONAL === -->
     <section class="info-institucional">
       <div class="bloque">
         <h3>🎯 Sobre nosotros</h3>
@@ -102,7 +99,6 @@
     </section>
   </main>
 
-  <!-- Banner nativo antes del footer -->
   <div class="banner-native">
     <script type="text/javascript">
       atOptions = {
@@ -116,25 +112,24 @@
     <script type="text/javascript" src="//www.highperformanceformat.com/71aa81f0d0763fffac95886cf9bcf12e/invoke.js"></script>
   </div>
 
-  <!-- Redes sociales -->
   <div class="redes-sociales">
     <a href="https://www.instagram.com/pixel_play1012" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     <a href="https://www.tiktok.com/@pixel_play1012" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
     <a href="https://www.facebook.com/profile.php?id=61581209832466" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 PixelPlay Todos los derechos reservados.</p>
     <p>Página creada por LegaCorp.</p>
   </footer>
 
-  <!-- Botón flotante de WhatsApp -->
   <a href="https://wa.me/573246161953?text=Hola%20PixelPlay%2C%20quiero%20más%20info" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Script principal -->
+  <script>
+    const rol = 'distribuidor'; // Rol fijo para esta vista
+  </script>
   <script src="catalogo.js"></script>
 </body>
 </html>

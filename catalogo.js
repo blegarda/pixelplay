@@ -1,4 +1,5 @@
 const rutaCatalogo = 'PixelPlay_catalogo.json';
+const rutaUsuarios = 'usuarios.json';
 const numeroWhatsApp = '573246161953';
 
 const catalogo = document.getElementById('catalogo');
@@ -9,16 +10,91 @@ const menuCategorias = document.getElementById('menuCategorias');
 
 let productos = [];
 let tipoActivo = 'Todos';
-const rol = sessionStorage.getItem('rol') || 'publico'; // 'admin', 'vendedor', 'frecuente', or null
 
-// Normalizar texto para búsqueda
+// 🔐 Validación de acceso inmediato
+(function validarAccesoPrivado() {
+  const paginaActual = window.location.pathname;
+  const esAdmin = paginaActual.includes('admin.html');
+  const esDistribuidor = paginaActual.includes('distribuidor.html');
+  const esIntranet = paginaActual.includes('intranet.html');
+
+  if (esAdmin || esDistribuidor) {
+    const sesionActiva = sessionStorage.getItem('usuarioAutenticado');
+    const rol = sessionStorage.getItem('rol');
+
+    if (sesionActiva !== 'true' || !rol) {
+      window.location.replace('intranet.html');
+      return;
+    }
+
+    const rolLower = rol.toLowerCase();
+
+    if (esAdmin && rolLower !== 'admin') {
+      window.location.replace('intranet.html');
+      return;
+    }
+
+    if (esDistribuidor && rolLower !== 'vendedor' && rolLower !== 'frecuente') {
+      window.location.replace('intranet.html');
+      return;
+    }
+
+    window.rolUsuario = rolLower;
+  } else {
+    window.rolUsuario = 'publico';
+  }
+
+  // 🧠 Login en intranet.html
+  if (esIntranet) {
+    const form = document.getElementById('loginForm');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const usuario = document.getElementById('usuario').value.trim();
+        const clave = document.getElementById('clave').value.trim();
+        const errorMsg = document.getElementById('errorMsg');
+
+        errorMsg.style.display = 'none';
+
+        fetch(rutaUsuarios)
+          .then(res => res.json())
+          .then(usuarios => {
+            const encontrado = usuarios.find(u => u.usuario === usuario && u.clave === clave);
+
+            if (!encontrado) {
+              errorMsg.textContent = 'Usuario o contraseña incorrectos';
+              errorMsg.style.display = 'block';
+              return;
+            }
+
+            sessionStorage.setItem('usuarioAutenticado', 'true');
+            sessionStorage.setItem('rol', encontrado.rol);
+            sessionStorage.setItem('nombreUsuario', encontrado.nombre);
+
+            if (encontrado.rol === 'admin') {
+              window.location.href = 'admin.html';
+            } else {
+              window.location.href = 'distribuidor.html';
+            }
+          })
+          .catch(() => {
+            errorMsg.textContent = 'Error al validar usuario';
+            errorMsg.style.display = 'block';
+          });
+      });
+    }
+  }
+})();
+
+// 🔎 Normalizar texto para búsqueda
 const normalizar = str =>
   str.toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^\w\s]/gi, "");
 
-// Mezclar array (Fisher-Yates)
+// 🔀 Mezclar array (Fisher-Yates)
 function mezclarArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -27,25 +103,27 @@ function mezclarArray(array) {
   return array;
 }
 
-// Cargar catálogo desde JSON
-fetch(rutaCatalogo)
-  .then(res => res.json())
-  .then(data => {
-    productos = data;
-    renderizarCatalogo();
-  })
-  .catch(err => {
-    console.error('Error al cargar el catálogo:', err);
-    catalogo.innerHTML = '<p>Error al cargar los productos.</p>';
-  });
+// 📦 Cargar catálogo desde JSON
+if (catalogo) {
+  fetch(rutaCatalogo)
+    .then(res => res.json())
+    .then(data => {
+      productos = data;
+      renderizarCatalogo();
+    })
+    .catch(err => {
+      console.error('Error al cargar el catálogo:', err);
+      catalogo.innerHTML = '<p>Error al cargar los productos.</p>';
+    });
+}
 
-// Renderizar productos agrupados por tipo y mezclados internamente
+// 🖼️ Renderizar productos agrupados por tipo
 function renderizarCatalogo() {
-  catalogo.innerHTML = ''; // Limpieza segura
+  catalogo.innerHTML = '';
 
   const texto = normalizar(busqueda?.value?.trim() || '');
+  const rol = window.rolUsuario || 'publico';
 
-  // Filtrar productos por texto y tipo activo
   const filtrados = productos.filter(p => {
     const coincideTipo = tipoActivo === 'Todos' || p.tipo === tipoActivo;
     const nombre = normalizar(p.nombre);
@@ -65,7 +143,6 @@ function renderizarCatalogo() {
     return;
   }
 
-  // Agrupar por tipo
   const grupos = {};
   filtrados.forEach(p => {
     const tipo = p.tipo || 'Otros';
@@ -73,7 +150,6 @@ function renderizarCatalogo() {
     grupos[tipo].push(p);
   });
 
-  // Renderizar cada grupo mezclado
   Object.keys(grupos).forEach(tipo => {
     const grupo = mezclarArray(grupos[tipo]);
 
@@ -81,13 +157,11 @@ function renderizarCatalogo() {
       let preciosHTML = '';
 
       if (rol === 'admin') {
-        preciosHTML = Object.entries(p.precios || {}).map(([clave, valor]) => {
-          return `<p><strong>${clave.charAt(0).toUpperCase() + clave.slice(1)}:</strong> ${valor}</p>`;
-        }).join('');
+        preciosHTML = `<p><strong>Cliente:</strong> $${p.precios?.cliente || 'Consultar'}</p>`;
       } else if (rol === 'vendedor' || rol === 'frecuente') {
-        preciosHTML = `<p><strong>Distribuidor:</strong> ${p.precios?.distribuidor || 'Consultar'}</p>`;
+        preciosHTML = `<p><strong>Distribuidor:</strong> $${p.precios?.distribuidor || 'Consultar'}</p>`;
       } else {
-        preciosHTML = `<p><strong>Sugerido:</strong> ${p.precios?.sugerido || 'Consultar'}</p>`;
+        preciosHTML = `<p><strong>Sugerido:</strong> $${p.precios?.sugerido || 'Consultar'}</p>`;
       }
 
       const item = document.createElement('article');
@@ -101,7 +175,7 @@ function renderizarCatalogo() {
         ${preciosHTML}
         <div class="cta">
           <span class="tipo">🛒 Tipo: ${p.tipo}</span>
-          <a class="whatsapp" href="https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(p.mensaje)}" target="_blank" rel="noopener noreferrer">
+          <a class="btn-whatsapp" href="https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(p.mensaje)}" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp fa-lg"></i> Compra aquí
           </a>
         </div>
@@ -112,27 +186,26 @@ function renderizarCatalogo() {
   });
 }
 
-// Filtro por categoría
-botones.forEach(btn => {
+// 🧩 Filtro por categoría
+botones?.forEach(btn => {
   btn.addEventListener('click', () => {
     tipoActivo = btn.dataset.tipo;
     botones.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     renderizarCatalogo();
 
-    // Cerrar menú en móviles
     if (window.innerWidth <= 768) {
-      menuCategorias.classList.remove('open');
+      menuCategorias?.classList.remove('open');
     }
   });
 });
 
-// Búsqueda en tiempo real
-busqueda.addEventListener('input', () => {
+// 🔎 Búsqueda en tiempo real
+busqueda?.addEventListener('input', () => {
   renderizarCatalogo();
 });
 
-// Menú hamburguesa en móviles
-menuToggle.addEventListener('click', () => {
-  menuCategorias.classList.toggle('open');
+// 📱 Menú hamburguesa
+menuToggle?.addEventListener('click', () => {
+  menuCategorias?.classList.toggle('open');
 });
