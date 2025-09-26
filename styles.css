@@ -12,18 +12,25 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Header sticky */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background-color: #ffffff;
-  color: #333;
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -35,22 +42,68 @@ body {
 }
 
 .logo h1 {
-  font-size: 1.2rem;
-  font-weight: bold;
+  display: none;
+}
+
+/* Buscador moderno */
+.busqueda-header {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.5rem 2.2rem 0.5rem 2.2rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #25d36633;
+}
+
+.search-box i {
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1rem;
+}
+
+/* Menú hamburguesa */
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
 }
 
 /* Categorías */
 .menu-categorias {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 0.5rem;
   position: absolute;
-  top: 60px;
+  top: 100%;
   right: 1rem;
   background-color: #ffffff;
   padding: 1rem;
   border-radius: 8px;
-  display: none;
   z-index: 10;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
@@ -74,43 +127,17 @@ body {
   background-color: #d0d0d0;
 }
 
-/* Hamburguesa */
-.hamburger {
-  display: block;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: #333;
-  cursor: pointer;
-}
-
-/* Buscador */
-.busqueda-wrapper {
-  padding: 1rem;
-  text-align: center;
-}
-
-#busqueda {
-  width: 80%;
-  max-width: 400px;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  color: #333;
-}
-
 /* Catálogo */
+.catalogo-wrapper {
+  padding: 1rem;
+}
+
 .catalogo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
-  padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  justify-content: center;
-  align-content: start;
 }
 
 /* Tarjetas de producto */
@@ -119,11 +146,8 @@ body {
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
   border: 1px solid #ddd;
-  max-width: 300px;
-  width: 100%;
-  margin: 0 auto;
+  transition: transform 0.3s;
 }
 
 .item:hover {
@@ -177,8 +201,7 @@ body {
 
 /* Banner nativo */
 .banner-native {
-  grid-column: 1 / -1;
-  margin: 1rem auto;
+  margin: 2rem auto;
   text-align: center;
   padding: 1rem;
   background-color: #ffffff;
@@ -190,7 +213,6 @@ body {
 /* Sección institucional */
 .info-institucional {
   background-color: #ffffff;
-  color: #333;
   padding: 2rem 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -261,24 +283,38 @@ footer {
   background-color: #1ebe5d;
 }
 
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 0.3s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(10px); }
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
-  #busqueda {
-    width: 100%;
-  }
-
   .catalogo {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .item {
-    max-width: none;
-    margin: 0;
   }
 
   .menu-categorias {
     flex-direction: column;
     top: 100%;
     right: 0;
+  }
+
+  .search-box {
+    max-width: 200px;
   }
 }

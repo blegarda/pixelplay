@@ -12,12 +12,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+  <!-- Header fijo con buscador -->
   <header>
     <nav class="navbar">
       <div class="logo">
         <img src="img/LogoPixel.PNG" alt="PixelPlay" />
         <h1>PixelPlay</h1>
       </div>
+
+      <div class="busqueda-header">
+        <form id="busquedaForm" onsubmit="event.preventDefault();">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="busqueda" placeholder="Buscar..." aria-label="Buscar producto" />
+          </div>
+        </form>
+      </div>
+
       <button id="menuToggle" class="hamburger" aria-label="Abrir menú">☰</button>
       <div id="menuCategorias" class="menu-categorias">
         <button data-tipo="Todos" class="active">Todos</button>
@@ -36,10 +48,6 @@
   </header>
 
   <main>
-    <section class="busqueda-wrapper">
-      <input type="text" id="busqueda" placeholder="Buscar servicio o nombre..." aria-label="Buscar producto" />
-    </section>
-
     <section class="catalogo-wrapper">
       <section id="catalogo" class="catalogo">
         <!-- Productos se cargan dinámicamente -->
@@ -92,6 +100,7 @@
     <p>Página creada por LegaCorp.</p>
   </footer>
 
+  <!-- Botón flotante de WhatsApp -->
   <a href="https://wa.me/573001234567?text=Hola%20PixelPlay%2C%20quiero%20más%20info" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>

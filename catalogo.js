@@ -59,7 +59,7 @@ function renderizarCatalogo() {
       return;
     }
 
-    filtrados.forEach(p => {
+    filtrados.forEach((p, i) => {
       const item = document.createElement('article');
       item.className = 'item fade-in';
       item.setAttribute('itemscope', '');
@@ -81,6 +81,17 @@ function renderizarCatalogo() {
       `;
 
       catalogo.appendChild(item);
+
+      // Si deseas insertar banners cada 4 productos, aquí puedes hacerlo
+      // if ((i + 1) % 4 === 0) {
+      //   const banner = document.createElement('div');
+      //   banner.className = 'banner-native';
+      //   banner.innerHTML = `
+      //     <script async src="//pl27728706.revenuecpmgate.com/e2901e644f7d6b4da755c95a7e40c787/invoke.js"></script>
+      //     <div id="container-e2901e644f7d6b4da755c95a7e40c787"></div>
+      //   `;
+      //   catalogo.appendChild(banner);
+      // }
     });
   }, 200);
 }
@@ -100,10 +111,10 @@ botones.forEach(btn => {
   });
 });
 
-// Búsqueda en tiempo real (solo en escritorio)
-if (window.innerWidth > 768) {
-  busqueda.addEventListener('input', renderizarCatalogo);
-}
+// Búsqueda en tiempo real
+busqueda.addEventListener('input', () => {
+  renderizarCatalogo();
+});
 
 // Menú hamburguesa en móviles
 menuToggle.addEventListener('click', () => {
