@@ -38,7 +38,7 @@ header {
 }
 
 .logo img {
-  height: 55px;
+  height: 32px;
 }
 
 .logo h1 {
@@ -208,6 +208,12 @@ header {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.banner-native iframe {
+  max-width: 100%;
+  border: none;
 }
 
 /* Sección institucional */
@@ -316,5 +322,9 @@ footer {
 
   .search-box {
     max-width: 200px;
+  }
+
+  .banner-native {
+    padding: 0.5rem;
   }
 }

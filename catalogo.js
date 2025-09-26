@@ -7,6 +7,10 @@ const busqueda = document.getElementById('busqueda');
 const menuToggle = document.getElementById('menuToggle');
 const menuCategorias = document.getElementById('menuCategorias');
 
+// Banner containers (ya están en el HTML)
+const bannerTop = document.querySelectorAll('.banner-native')[0];
+const bannerBottom = document.querySelectorAll('.banner-native')[1];
+
 let productos = [];
 let tipoActivo = 'Todos';
 
@@ -23,6 +27,7 @@ fetch(rutaCatalogo)
   .then(data => {
     productos = data;
     renderizarCatalogo();
+    insertarBanners();
   })
   .catch(err => {
     console.error('Error al cargar el catálogo:', err);
@@ -81,17 +86,6 @@ function renderizarCatalogo() {
       `;
 
       catalogo.appendChild(item);
-
-      // Si deseas insertar banners cada 4 productos, aquí puedes hacerlo
-      // if ((i + 1) % 4 === 0) {
-      //   const banner = document.createElement('div');
-      //   banner.className = 'banner-native';
-      //   banner.innerHTML = `
-      //     <script async src="//pl27728706.revenuecpmgate.com/e2901e644f7d6b4da755c95a7e40c787/invoke.js"></script>
-      //     <div id="container-e2901e644f7d6b4da755c95a7e40c787"></div>
-      //   `;
-      //   catalogo.appendChild(banner);
-      // }
     });
   }, 200);
 }
@@ -120,3 +114,34 @@ busqueda.addEventListener('input', () => {
 menuToggle.addEventListener('click', () => {
   menuCategorias.classList.toggle('open');
 });
+
+// Insertar banners en contenedores fijos
+function insertarBanners() {
+  // Banner entre catálogo e institucional
+  bannerTop.innerHTML = `
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '71aa81f0d0763fffac95886cf9bcf12e',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/71aa81f0d0763fffac95886cf9bcf12e/invoke.js"></script>
+  `;
+
+  // Banner antes del footer
+  bannerBottom.innerHTML = `
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '71aa81f0d0763fffac95886cf9bcf12e',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/71aa81f0d0763fffac95886cf9bcf12e/invoke.js"></script>
+  `;
+}
