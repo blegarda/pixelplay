@@ -35,8 +35,7 @@ body {
 }
 
 .logo h1 {
-  font-size: 1.2rem;
-  font-weight: bold;
+  display: none;
 }
 
 /* Categorías */
