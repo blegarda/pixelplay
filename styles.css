@@ -7,179 +7,169 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #0f1117;
+  color: #e0e0e0;
   line-height: 1.6;
 }
 
-/* Encabezado */
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #1f1f1f;
-  border-bottom: 1px solid #333;
-}
-
-header .logo {
-  width: 120px;
-  margin-bottom: 1rem;
-}
-
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1rem;
-  color: #bbbbbb;
-}
-
-/* Botón hamburguesa */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 1rem;
-  align-items: center;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 2px;
-}
-
-/* Menú de categorías */
-nav.menu-categorias {
-  background-color: #1a1a1a;
-  padding: 1rem;
-  border-bottom: 1px solid #333;
-}
-
-nav.menu-categorias ul {
+/* Navbar */
+.navbar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1d24;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+  border-bottom: 1px solid #2c2f36;
 }
 
-nav.menu-categorias button {
-  background-color: #2a2a2a;
-  color: #fff;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 50px;
+  padding-left: 2rem;
+}
+
+.logo h1 {
+  display: none;
+  
+}
+
+/* Categorías */
+.menu-categorias {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu-categorias button {
+  background-color: #2c2f36;
+  color: #e0e0e0;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
+  transition: background 0.3s;
 }
 
-nav.menu-categorias button:hover,
-nav.menu-categorias button.active {
-  background-color: #00ffcc;
-  color: #000;
+.menu-categorias button:hover,
+.menu-categorias button.active {
+  background-color: #3d414b;
 }
 
-/* Filtros */
-section.filtros {
-  padding: 1rem 2rem;
-  background-color: #1a1a1a;
-  border-bottom: 1px solid #333;
-}
-
-section.filtros input[type="text"] {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
+/* Hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
   border: none;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  background-color: #2a2a2a;
   color: #fff;
+  cursor: pointer;
 }
 
-section.filtros input::placeholder {
+/* Buscador */
+.busqueda-wrapper {
+  padding: 1rem;
+  text-align: center;
+}
+
+#busqueda {
+  width: 80%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #1a1d24;
+  color: #e0e0e0;
+}
+
+.solo-categorias {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
   color: #aaa;
 }
 
 /* Catálogo */
-main .catalog {
+.catalogo {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
 
-/* Tarjeta de producto */
-article.item {
-  background-color: #1e1e1e;
+.item {
+  background-color: #1a1d24;
   border-radius: 8px;
   padding: 1rem;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
-  opacity: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+  border: 1px solid #2c2f36;
 }
 
-article.item:hover {
-  transform: scale(1.03);
+.item:hover {
+  transform: translateY(-4px);
 }
 
-article.item img {
-  width: 100px;
-  max-width: 150px;
-  margin-bottom: 1rem;
+.item img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  border-radius: 1px;
 }
 
-article.item h2 {
+.item h2 {
   font-size: 1.1rem;
   margin: 0.5rem 0;
-  color: #ffffff;
+  color: #fff;
 }
 
-article.item p {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  color: #00ffcc;
+.item p {
+  font-weight: bold;
+  color: #00ffc8;
 }
 
-/* CTA: tipo + botón */
 .cta {
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.4rem;
 }
 
-.tipo {
+.cta .tipo {
   font-size: 0.9rem;
-  color: #ccc;
+  color: #bbb;
 }
 
 .whatsapp {
-  background-color: #25D366;
-  color: #000;
+  background-color: #25d366;
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
   text-decoration: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-weight: bold;
-  display: inline-flex;
+  font-size: 0.9rem;
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
-  transition: background-color 0.2s ease;
+  gap: 0.3rem;
 }
 
 .whatsapp:hover {
   background-color: #1ebe5d;
 }
 
-/* Animaciones suaves */
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 0.3s ease-in forwards;
+}
+.fade-out {
+  animation: fadeOut 0.2s ease-out forwards;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
@@ -190,57 +180,41 @@ article.item p {
   to { opacity: 0; transform: scale(0.95); }
 }
 
-.item.fade-in {
-  animation: fadeIn 0.3s ease forwards;
-}
-
-.item.fade-out {
-  animation: fadeOut 0.2s ease forwards;
-}
-
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #1f1f1f;
+  background-color: #1a1d24;
   color: #888;
   font-size: 0.9rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid #2c2f36;
 }
 
-/* Responsive */
+/* Responsivo */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-    justify-content: center;
-  }
-
-  nav.menu-categorias {
+  .menu-categorias {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    background-color: #2c2f36;
+    padding: 1rem;
+    border-radius: 8px;
     display: none;
-    flex-direction: column;
-    background-color: #1a1a1a;
-    padding: 1rem;
+    z-index: 10;
   }
 
-  nav.menu-categorias.open {
+  .menu-categorias.open {
     display: flex;
   }
 
-  nav.menu-categorias ul {
-    flex-direction: column;
-    align-items: stretch;
+  .hamburger {
+    display: block;
   }
 
-  section.filtros {
-    padding: 1rem;
+  .logo h1{
+    display: none;
   }
-
-  main .catalog {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+  .logo img {
+    padding-left: 1rem;
   }
-
-  article.item img {
-    width: 80px;
-  }
-}

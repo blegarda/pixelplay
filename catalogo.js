@@ -10,6 +10,14 @@ const menuCategorias = document.getElementById('menuCategorias');
 let productos = [];
 let tipoActivo = 'Todos';
 
+// Función para limpiar y normalizar texto
+const normalizar = str =>
+  str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // quita acentos
+    .replace(/[^\w\s]/gi, "")        // quita símbolos
+
 // Cargar catálogo desde JSON
 fetch(rutaCatalogo)
   .then(res => res.json())
@@ -24,11 +32,25 @@ fetch(rutaCatalogo)
 
 // Renderizar productos filtrados
 function renderizarCatalogo() {
-  const texto = busqueda.value.toLowerCase();
+  const esMovil = window.innerWidth <= 768;
+  const texto = normalizar(busqueda?.value?.trim() || '');
 
   const filtrados = productos.filter(p => {
     const coincideTipo = tipoActivo === 'Todos' || p.tipo === tipoActivo;
-    const coincideTexto = p.nombre.toLowerCase().includes(texto);
+
+    if (esMovil) {
+      return coincideTipo; // solo filtra por categoría en móviles
+    }
+
+    const nombre = normalizar(p.nombre);
+    const tipo = normalizar(p.tipo);
+    const mensaje = normalizar(p.mensaje || '');
+
+    const coincideTexto =
+      nombre.includes(texto) ||
+      tipo.includes(texto) ||
+      mensaje.includes(texto);
+
     return coincideTipo && coincideTexto;
   });
 
@@ -86,8 +108,10 @@ botones.forEach(btn => {
   });
 });
 
-// Búsqueda en tiempo real
-busqueda.addEventListener('input', renderizarCatalogo);
+// Búsqueda en tiempo real (solo en escritorio)
+if (window.innerWidth > 768) {
+  busqueda.addEventListener('input', renderizarCatalogo);
+}
 
 // Menú hamburguesa en móviles
 menuToggle.addEventListener('click', () => {

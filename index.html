@@ -3,65 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PixelPlay - Cuentas de Streaming por WhatsApp</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="PixelPlay: catálogo de cuentas de streaming como Netflix, Disney+, HBO y más. Compra fácil por WhatsApp." />
-  <meta name="keywords" content="Netflix, Disney+, HBO, cuentas streaming, PixelPlay, comprar cuentas, WhatsApp" />
-  <meta name="author" content="PixelPlay" />
-
-  <!-- Favicon & Styles -->
-  <link rel="icon" href="img/logos/favicon.png" type="image/png" />
+  <meta name="description" content="PixelPlay - Catálogo de cuentas de streaming con compra directa por WhatsApp." />
+  <meta name="keywords" content="PixelPlay, streaming, cuentas, catálogo, WhatsApp, completa, duo, trio" />
+  <meta name="author" content="LegaCorp" />
+  <title>PixelPlay | Streaming a tu alcance</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <script src="https://kit.fontawesome.com/a2e0e6f6e4.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <img src="img/LogoPixel.png" alt="Logo PixelPlay" class="logo" />
-    <h1>Tu acceso directo al entretenimiento</h1>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/LogoPixel.PNG" alt="PixelPlay" />
+        <h1>PixelPlay</h1>
+      </div>
+      <button id="menuToggle" class="hamburger" aria-label="Abrir menú">
+        ☰
+      </button>
+      <div id="menuCategorias" class="menu-categorias">
+        <button data-tipo="Todos" class="active">Todos</button>
+        <button data-tipo="Completa">Completas</button>
+        <button data-tipo="Duo">Duos</button>
+        <button data-tipo="Trio">Trios</button>
+        <button data-tipo="Combo">Combos</button>
+        <button data-tipo="Individual">Individuales</button>
+      </div>
+    </nav>
   </header>
 
-  <!-- Botón hamburguesa para móviles -->
-  <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú de categorías">
-    <span></span><span></span><span></span>
-  </div>
-
-  <!-- Menú de categorías -->
-  <nav class="menu-categorias" id="menuCategorias" aria-label="Categorías de productos">
-    <ul>
-      <li><button data-tipo="Todos" class="active">Todos</button></li>
-      <li><button data-tipo="Completa">Completa</button></li>
-      <li><button data-tipo="Individual">Individual</button></li>
-      <li><button data-tipo="Duo">Duo</button></li>
-      <li><button data-tipo="Trio">Trio</button></li>
-      <li><button data-tipo="Super Pack">Super Pack</button></li>
-      <li><button data-tipo="Mega Pack">Mega Pack</button></li>
-      <li><button data-tipo="Combo Definitivo">Combo Definitivo</button></li>
-      <li><button data-tipo="App">App</button></li>
-      <li><button data-tipo="Audio">Audio</button></li>
-      <li><button data-tipo="Web">Web</button></li>
-    </ul>
-  </nav>
-
-  <!-- Barra de búsqueda -->
-  <section class="filtros" aria-label="Buscar productos">
-    <input type="text" id="busqueda" placeholder="🔍 Buscar producto..." aria-label="Buscar por nombre" />
-  </section>
-
-  <!-- Catálogo dinámico -->
   <main>
-    <section class="catalog" id="catalogo" aria-label="Listado de productos">
-      <!-- Productos se insertan dinámicamente como <article> -->
+    <section class="busqueda-wrapper">
+      <input type="text" id="busqueda" placeholder="Buscar servicio o nombre..." aria-label="Buscar producto" />
+      <p class="solo-categorias">🔍 En móviles, filtra por categoría</p>
+    </section>
+
+    <section id="catalogo" class="catalogo">
+      <!-- Productos se cargan dinámicamente -->
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 PixelPlay. Todos los derechos reservados.</p>
-    <p>Pagina creada por LegaCorp</p>
+    <p>&copy; 2025 PixelPlay. Todos los derehos reservados</p>
+    <p>Proyecto creado por LegaCorp.</p>
   </footer>
 
-  <!-- Script principal -->
   <script src="catalogo.js"></script>
 </body>
 </html>
