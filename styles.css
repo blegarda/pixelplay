@@ -31,11 +31,10 @@ body {
 }
 
 .logo img {
-  height: 50px;
+  height: 32px;
 }
 
 .logo h1 {
-  display: none;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -219,7 +218,12 @@ footer {
 
 /* Responsivo */
 @media (max-width: 768px) {
+  
   .solo-categorias {
     display: block;
+  }
+
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr); /* Fuerza 2 columnas en móvil */
   }
 }
