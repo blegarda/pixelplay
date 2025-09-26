@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0f1117;
-  color: #e0e0e0;
+  background-color: #f4f5f7;
+  color: #333;
   line-height: 1.6;
 }
 
@@ -17,11 +17,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1a1d24;
-  color: #fff;
+  background-color: #ffffff;
+  color: #333;
   padding: 1rem;
   position: relative;
-  border-bottom: 1px solid #2c2f36;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .logo {
@@ -46,11 +47,12 @@ body {
   position: absolute;
   top: 60px;
   right: 1rem;
-  background-color: #2c2f36;
+  background-color: #ffffff;
   padding: 1rem;
   border-radius: 8px;
   display: none;
   z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .menu-categorias.open {
@@ -58,8 +60,8 @@ body {
 }
 
 .menu-categorias button {
-  background-color: #2c2f36;
-  color: #e0e0e0;
+  background-color: #e0e0e0;
+  color: #333;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -69,7 +71,7 @@ body {
 
 .menu-categorias button:hover,
 .menu-categorias button.active {
-  background-color: #3d414b;
+  background-color: #d0d0d0;
 }
 
 /* Hamburguesa */
@@ -78,7 +80,7 @@ body {
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: #fff;
+  color: #333;
   cursor: pointer;
 }
 
@@ -93,17 +95,17 @@ body {
   max-width: 400px;
   padding: 0.5rem;
   font-size: 1rem;
-  border: 1px solid #444;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #1a1d24;
-  color: #e0e0e0;
+  background-color: #fff;
+  color: #333;
 }
 
 .solo-categorias {
   display: none;
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  color: #aaa;
+  color: #666;
 }
 
 /* Catálogo */
@@ -121,18 +123,18 @@ body {
 .catalogo p {
   text-align: center;
   font-size: 1rem;
-  color: #aaa;
+  color: #666;
   grid-column: 1 / -1;
 }
 
 /* Tarjetas de producto */
 .item {
-  background-color: #1a1d24;
+  background-color: #ffffff;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s;
-  border: 1px solid #2c2f36;
+  border: 1px solid #ddd;
   max-width: 300px;
   width: 100%;
   margin: 0 auto;
@@ -151,12 +153,12 @@ body {
 .item h2 {
   font-size: 1.1rem;
   margin: 0.5rem 0;
-  color: #fff;
+  color: #222;
 }
 
 .item p {
   font-weight: bold;
-  color: #00ffc8;
+  color: #25d366;
 }
 
 .cta {
@@ -168,7 +170,7 @@ body {
 
 .cta .tipo {
   font-size: 0.9rem;
-  color: #bbb;
+  color: #777;
 }
 
 .whatsapp {
@@ -209,20 +211,27 @@ body {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #1a1d24;
+  background-color: #ffffff;
   color: #888;
   font-size: 0.9rem;
-  border-top: 1px solid #2c2f36;
+  border-top: 1px solid #ddd;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  
+
   .solo-categorias {
     display: block;
   }
 
   .catalogo {
-    grid-template-columns: repeat(2, 1fr); /* Fuerza 2 columnas en móvil */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .item {
+    max-width: none;
+    margin: 0;
   }
 }
