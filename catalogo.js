@@ -114,34 +114,3 @@ busqueda.addEventListener('input', () => {
 menuToggle.addEventListener('click', () => {
   menuCategorias.classList.toggle('open');
 });
-
-// Insertar banners en contenedores fijos
-function insertarBanners() {
-  // Banner entre catálogo e institucional
-  bannerTop.innerHTML = `
-    <script type="text/javascript">
-      atOptions = {
-        'key' : '71aa81f0d0763fffac95886cf9bcf12e',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/71aa81f0d0763fffac95886cf9bcf12e/invoke.js"></script>
-  `;
-
-  // Banner antes del footer
-  bannerBottom.innerHTML = `
-    <script type="text/javascript">
-      atOptions = {
-        'key' : '71aa81f0d0763fffac95886cf9bcf12e',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/71aa81f0d0763fffac95886cf9bcf12e/invoke.js"></script>
-  `;
-}
