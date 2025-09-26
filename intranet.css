@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  background: url('fondo_pixelplay.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Overlay para oscurecer ligeramente el fondo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Login wrapper con efecto de entrada */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Caja con glassmorphism */
+.login-box {
+  display: flex;
+  flex-direction: row;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  overflow: hidden;
+  max-width: 960px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Formulario */
+.login-left {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-login {
+  width: 120px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 5px #00ffffaa);
+}
+
+.login-left h2 {
+  font-size: 1.6rem;
+  color: #00ffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00ffff55;
+}
+
+.login-left form {
+  width: 100%;
+  max-width: 300px;
+}
+
+.login-left input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #00ffff55;
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.login-left input::placeholder {
+  color: #ccc;
+}
+
+.login-left input:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 8px #00ffff88;
+  outline: none;
+}
+
+.login-left button {
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  color: #0e0f11;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px #00ffff55; }
+  50% { box-shadow: 0 0 10px #00ffffaa; }
+  100% { box-shadow: 0 0 0px #00ffff55; }
+}
+
+.mensaje-error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  display: none;
+}
+
+/* Presentación lateral */
+.login-right {
+  flex: 1;
+  padding: 2rem;
+  background: url('anime_sombra.png') no-repeat center center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: left;
+}
+
+.login-right h3 {
+  font-size: 1.4rem;
+  color: #00ffff;
+  margin-bottom: 1rem;
+}
+
+.login-right p {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.login-right ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.login-right ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.info-text {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+  }
+
+  .login-right {
+    background: none;
+    text-align: center;
+  }
+}

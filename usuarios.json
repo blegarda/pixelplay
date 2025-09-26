@@ -1,0 +1,20 @@
+[
+  {
+    "usuario": "blegarda",
+    "clave": "Yule1012*",
+    "nombre": "blegarda",
+    "rol": "admin"
+  },
+  {
+    "usuario": "hellen",
+    "clave": "Vendedor4160",
+    "nombre": "Hellen",
+    "rol": "vendedor"
+  },
+  {
+    "usuario": "maikol",
+    "clave": "Clientefre1001",
+    "nombre": "Maikol",
+    "rol": "frecuente"
+  }
+]

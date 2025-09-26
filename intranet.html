@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelPlay - Intranet</title>
+
+  <!-- Tipografía tipo videojuego -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="intranet.css" />
+
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/a2e0e6f91e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Vista de acceso -->
+  <div class="login-wrapper" id="loginView">
+    <div class="login-box">
+      <div class="login-left">
+        <img src="img/LogoPixel.PNG" alt="PixelPlay" class="logo-login" />
+        <h2>Acceso a la Intranet</h2>
+        <form id="loginForm">
+          <input type="text" id="usuario" placeholder="Usuario" required />
+          <input type="password" id="clave" placeholder="Contraseña" required />
+          <button type="submit">Acceder</button>
+          <div class="mensaje-error" id="errorMsg">Usuario o contraseña incorrectos</div>
+        </form>
+      </div>
+
+      <div class="login-right">
+        <h3>Bienvenido a PixelPlay</h3>
+        <p>Este acceso es exclusivo para:</p>
+        <ul>
+          <li>🔒 Administradores</li>
+          <li>🛍️ Vendedores</li>
+          <li>⭐ Clientes frecuentes</li>
+        </ul>
+        <p class="info-text">Accede a precios especiales, gestión de productos y funciones avanzadas del catálogo. Tu cuenta es tu pase a un universo de entretenimiento.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vista del catálogo -->
+  <div id="catalogoView" style="display: none;">
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="img/LogoPixel.PNG" alt="PixelPlay" />
+          <h1>PixelPlay</h1>
+        </div>
+
+        <div class="busqueda-header">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="busqueda" placeholder="Buscar..." />
+          </div>
+        </div>
+
+        <div class="acceso-trabajadores">
+          <button class="login-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+
+        <button id="menuToggle" class="hamburger"><i class="fas fa-bars"></i></button>
+        <div id="menuCategorias" class="menu-categorias">
+          <button data-tipo="Todos" class="active">Todos</button>
+          <button data-tipo="App">App</button>
+          <button data-tipo="Completa">Completa</button>
+          <button data-tipo="Individual">Individual</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="catalogo-wrapper">
+      <section id="catalogo" class="catalogo"></section>
+    </main>
+
+    <a href="https://wa.me/573246161953" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="catalogo.js"></script>
+  <script src="intranet.js"></script>
+</body>
+</html>
