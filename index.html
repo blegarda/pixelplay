@@ -9,7 +9,7 @@
   <title>PixelPlay</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="img/icono.png" type="image/svg+xml" />
-  <script src="https://kit.fontawesome.com/a2e0e6f6e4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header>
@@ -18,9 +18,7 @@
         <img src="img/LogoPixel.PNG" alt="PixelPlay" />
         <h1>PixelPlay</h1>
       </div>
-      <button id="menuToggle" class="hamburger" aria-label="Abrir menú">
-        ☰
-      </button>
+      <button id="menuToggle" class="hamburger" aria-label="Abrir menú">☰</button>
       <div id="menuCategorias" class="menu-categorias">
         <button data-tipo="Todos" class="active">Todos</button>
         <button data-tipo="Completa">Completa</button>
@@ -42,15 +40,61 @@
       <input type="text" id="busqueda" placeholder="Buscar servicio o nombre..." aria-label="Buscar producto" />
     </section>
 
-    <section id="catalogo" class="catalogo">
-      <!-- Productos se cargan dinámicamente -->
+    <section class="catalogo-wrapper">
+      <section id="catalogo" class="catalogo">
+        <!-- Productos se cargan dinámicamente -->
+      </section>
+
+      <!-- Banner nativo entre catálogo e institucional -->
+      <div class="banner-native">
+        <script async="async" data-cfasync="false" src="//pl27728706.revenuecpmgate.com/e2901e644f7d6b4da755c95a7e40c787/invoke.js"></script>
+        <div id="container-e2901e644f7d6b4da755c95a7e40c787"></div>
+      </div>
+    </section>
+
+    <section class="info-institucional">
+      <div class="bloque">
+        <h3>🎯 Sobre nosotros</h3>
+        <p>PixelPlay es una tienda virtual especializada en cuentas de streaming. Nuestro enfoque es brindar acceso rápido, seguro y confiable a tus plataformas favoritas.</p>
+      </div>
+
+      <div class="bloque">
+        <h3>💼 Trabaja con nosotros</h3>
+        <p>¿Te apasiona el mundo digital? Estamos buscando aliados para atención al cliente, gestión de cuentas y expansión comercial. Escríbenos a <strong>pixelplay1012@gmail.com</strong>. También por nuestro WhatsApp en el icono en la esquina inferior derecha.</p>
+      </div>
+
+      <div class="bloque">
+        <h3>💳 Métodos de pago</h3>
+        <p>Aceptamos Nequi, Daviplata, Bancolombia y transferencias. Estos pagos son directamente por WhatsApp.</p>
+      </div>
+
+      <div class="bloque">
+        <h3>📞 Contacto</h3>
+        <p>Email: pixelplay1012@gmail.com<br>WhatsApp: +57 324 616 1953<br>Horario: 24/7</p>
+      </div>
     </section>
   </main>
 
+  <!-- Banner nativo antes del footer -->
+  <div class="banner-native">
+    <script async="async" data-cfasync="false" src="//pl27728706.revenuecpmgate.com/e2901e644f7d6b4da755c95a7e40c787/invoke.js"></script>
+    <div id="container-e2901e644f7d6b4da755c95a7e40c787"></div>
+  </div>
+
+  <div class="redes-sociales">
+    <a href="https://www.instagram.com/pixel_play1012" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@pixel_play1012" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=61581209832466" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+  </div>
+
   <footer>
-    <p>&copy; 2025 PixelPlay Todos los derechos reservados.</p> 
-    <p>Pagina creada por LegaCorp.</p>
+    <p>&copy; 2025 PixelPlay Todos los derechos reservados.</p>
+    <p>Página creada por LegaCorp.</p>
   </footer>
+
+  <a href="https://wa.me/573001234567?text=Hola%20PixelPlay%2C%20quiero%20más%20info" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <script src="catalogo.js"></script>
 </body>

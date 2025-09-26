@@ -10,13 +10,12 @@ const menuCategorias = document.getElementById('menuCategorias');
 let productos = [];
 let tipoActivo = 'Todos';
 
-// Función para limpiar y normalizar texto
+// Normalizar texto para búsqueda
 const normalizar = str =>
-  str
-    .toLowerCase()
+  str.toLowerCase()
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // quita acentos
-    .replace(/[^\w\s]/gi, "")        // quita símbolos
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\w\s]/gi, "");
 
 // Cargar catálogo desde JSON
 fetch(rutaCatalogo)
@@ -32,7 +31,6 @@ fetch(rutaCatalogo)
 
 // Renderizar productos filtrados
 function renderizarCatalogo() {
-  const esMovil = window.innerWidth <= 768;
   const texto = normalizar(busqueda?.value?.trim() || '');
 
   const filtrados = productos.filter(p => {
@@ -49,17 +47,15 @@ function renderizarCatalogo() {
     return coincideTipo && coincideTexto;
   });
 
-  // Transición de salida
+  // Eliminar solo tarjetas, no banners
   catalogo.querySelectorAll('.item').forEach(el => {
     el.classList.add('fade-out');
     setTimeout(() => el.remove(), 200);
   });
 
   setTimeout(() => {
-    catalogo.innerHTML = '';
-
     if (filtrados.length === 0) {
-      catalogo.innerHTML = '<p>No se encontraron productos.</p>';
+      catalogo.innerHTML += '<p>No se encontraron productos.</p>';
       return;
     }
 
@@ -83,6 +79,7 @@ function renderizarCatalogo() {
           </a>
         </div>
       `;
+
       catalogo.appendChild(item);
     });
   }, 200);
@@ -103,7 +100,7 @@ botones.forEach(btn => {
   });
 });
 
-// Búsqueda en tiempo real
+// Búsqueda en tiempo real (solo en escritorio)
 if (window.innerWidth > 768) {
   busqueda.addEventListener('input', renderizarCatalogo);
 }
