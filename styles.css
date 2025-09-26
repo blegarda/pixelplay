@@ -1,0 +1,246 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #333;
+}
+
+header .logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #bbbbbb;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 1rem;
+  align-items: center;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* Menú de categorías */
+nav.menu-categorias {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+nav.menu-categorias ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  justify-content: center;
+}
+
+nav.menu-categorias button {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+nav.menu-categorias button:hover,
+nav.menu-categorias button.active {
+  background-color: #00ffcc;
+  color: #000;
+}
+
+/* Filtros */
+section.filtros {
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+section.filtros input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+section.filtros input::placeholder {
+  color: #aaa;
+}
+
+/* Catálogo */
+main .catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Tarjeta de producto */
+article.item {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  opacity: 1;
+}
+
+article.item:hover {
+  transform: scale(1.03);
+}
+
+article.item img {
+  width: 100px;
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+article.item h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+
+article.item p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #00ffcc;
+}
+
+/* CTA: tipo + botón */
+.cta {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tipo {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.whatsapp {
+  background-color: #25D366;
+  color: #000;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.2s ease;
+}
+
+.whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}
+
+.item.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.item.fade-out {
+  animation: fadeOut 0.2s ease forwards;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1f1f1f;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav.menu-categorias {
+    display: none;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 1rem;
+  }
+
+  nav.menu-categorias.open {
+    display: flex;
+  }
+
+  nav.menu-categorias ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  section.filtros {
+    padding: 1rem;
+  }
+
+  main .catalog {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  article.item img {
+    width: 80px;
+  }
+}

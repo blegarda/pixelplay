@@ -1,0 +1,618 @@
+[
+  {
+    "codigo": 1021,
+    "tipo": "Completa",
+    "nombre": "Netflix Completa Original Renovable",
+    "precio": "$44.900",
+    "imagen": "img/netflix.png",
+    "mensaje": "Hola, me interesa la cuenta Netflix Completa Original Renovable"
+  },
+  {
+    "codigo": 1022,
+    "tipo": "Completa",
+    "nombre": "Netflix Completa Generica",
+    "precio": "$39.900",
+    "imagen": "img/netflix.png",
+    "mensaje": "Hola, me interesa la cuenta Netflix Completa Generica"
+  },
+  {
+    "codigo": 1023,
+    "tipo": "Individual",
+    "nombre": "Netflix Generica",
+    "precio": "$14.900",
+    "imagen": "img/netflix.png",
+    "mensaje": "Hola, me interesa la cuenta Netflix Generica"
+  },
+  {
+    "codigo": 1024,
+    "tipo": "Individual",
+    "nombre": "Netflix Original",
+    "precio": "$15.900",
+    "imagen": "img/netflix.png",
+    "mensaje": "Hola, me interesa la cuenta Netflix Original"
+  },
+  {
+    "codigo": 1025,
+    "tipo": "Individual",
+    "nombre": "Netflix Original 33 Días",
+    "precio": "$16.900",
+    "imagen": "img/netflix.png",
+    "mensaje": "Hola, me interesa la cuenta Netflix Original 33 Días"
+  },
+  {
+    "codigo": 1026,
+    "tipo": "Completa",
+    "nombre": "Crunchyroll Completo",
+    "precio": "$12.000",
+    "imagen": "img/crunchyroll.png",
+    "mensaje": "Hola, me interesa la cuenta Crunchyroll Completo"
+  },
+  {
+    "codigo": 1027,
+    "tipo": "Individual",
+    "nombre": "Crunchyroll Pantalla",
+    "precio": "$10.900",
+    "imagen": "img/crunchyroll.png",
+    "mensaje": "Hola, me interesa la cuenta Crunchyroll Pantalla"
+  },
+  {
+    "codigo": 1028,
+    "tipo": "Completa",
+    "nombre": "Disney Completa",
+    "precio": "$18.900",
+    "imagen": "img/disney.png",
+    "mensaje": "Hola, me interesa la cuenta Disney Completa"
+  },
+  {
+    "codigo": 1029,
+    "tipo": "Completa",
+    "nombre": "Disney Premium Completa",
+    "precio": "$32.900",
+    "imagen": "img/disney.png",
+    "mensaje": "Hola, me interesa la cuenta Disney Premium Completa"
+  },
+  {
+    "codigo": 1030,
+    "tipo": "Individual",
+    "nombre": "Disney Premium Pantalla",
+    "precio": "$12.900",
+    "imagen": "img/disney.png",
+    "mensaje": "Hola, me interesa la cuenta Disney Premium Pantalla"
+  },
+  {
+    "codigo": 1031,
+    "tipo": "Individual",
+    "nombre": "Disney Plus Pantalla",
+    "precio": "$8.900",
+    "imagen": "img/disney.png",
+    "mensaje": "Hola, me interesa la cuenta Disney Plus Pantalla"
+  },
+  {
+    "codigo": 1032,
+    "tipo": "Completa",
+    "nombre": "HBO Max Estandar Completa",
+    "precio": "$18.000",
+    "imagen": "img/hbo.png",
+    "mensaje": "Hola, me interesa la cuenta HBO Max Estandar Completa"
+  },
+  {
+    "codigo": 1033,
+    "tipo": "Individual",
+    "nombre": "HBO Max Estandar Pantalla",
+    "precio": "$10.900",
+    "imagen": "img/hbo.png",
+    "mensaje": "Hola, me interesa la cuenta HBO Max Estandar Pantalla"
+  },
+  {
+    "codigo": 1034,
+    "tipo": "Completa",
+    "nombre": "HBO Max Platino Completa",
+    "precio": "$20.000",
+    "imagen": "img/hbo.png",
+    "mensaje": "Hola, me interesa la cuenta HBO Max Platino Completa"
+  },
+  {
+    "codigo": 1035,
+    "tipo": "Individual",
+    "nombre": "HBO Max Platino Pantalla",
+    "precio": "$12.900",
+    "imagen": "img/hbo.png",
+    "mensaje": "Hola, me interesa la cuenta HBO Max Platino Pantalla"
+  },
+  {
+    "codigo": 1036,
+    "tipo": "Completa",
+    "nombre": "Paramount Completa",
+    "precio": "$14.000",
+    "imagen": "img/paramount.svg",
+    "mensaje": "Hola, me interesa la cuenta Paramount Completa"
+  },
+  {
+    "codigo": 1037,
+    "tipo": "Individual",
+    "nombre": "Paramount Pantalla",
+    "precio": "$8.900",
+    "imagen": "img/paramount.svg",
+    "mensaje": "Hola, me interesa la cuenta Paramount Pantalla"
+  },
+  {
+    "codigo": 1038,
+    "tipo": "Completa",
+    "nombre": "Prime Video Cuenta",
+    "precio": "$18.000",
+    "imagen": "img/prime.png",
+    "mensaje": "Hola, me interesa la cuenta Prime Video Cuenta"
+  },
+  {
+    "codigo": 1039,
+    "tipo": "Individual",
+    "nombre": "Prime Video Pantalla Original",
+    "precio": "$14.900",
+    "imagen": "img/prime.png",
+    "mensaje": "Hola, me interesa la cuenta Prime Video Pantalla Original"
+  },
+  {
+    "codigo": 1040,
+    "tipo": "Individual",
+    "nombre": "Prime Video Pantalla",
+    "precio": "$12.000",
+    "imagen": "img/prime.png",
+    "mensaje": "Hola, me interesa la cuenta Prime Video Pantalla"
+  },
+  {
+    "codigo": 1041,
+    "tipo": "Completa",
+    "nombre": "MAGIS PRO Completa",
+    "precio": "$15.900",
+    "imagen": "img/magis.png",
+    "mensaje": "Hola, me interesa la cuenta MAGIS PRO Completa"
+  },
+  {
+    "codigo": 1042,
+    "tipo": "Individual",
+    "nombre": "MAGIS PRO Pantalla",
+    "precio": "$9.500",
+    "imagen": "img/magis.png",
+    "mensaje": "Hola, me interesa la cuenta MAGIS PRO Pantalla"
+  },
+  {
+    "codigo": 1043,
+    "tipo": "Individual",
+    "nombre": "Youtube 1 Mes",
+    "precio": "$11.900",
+    "imagen": "img/youtube.png",
+    "mensaje": "Hola, me interesa la cuenta Youtube por 1 mes"
+  },
+  {
+    "codigo": 1044,
+    "tipo": "Completa",
+    "nombre": "WIN Sports Online",
+    "precio": "$22.900",
+    "imagen": "img/win.png",
+    "mensaje": "Hola, me interesa WIN Sports Online"
+  },
+  {
+    "codigo": 1045,
+    "tipo": "Duo",
+    "nombre": "Netflix + HBO",
+    "precio": "$16.900",
+    "imagen": "img/combo1.png",
+    "mensaje": "Hola, me interesa el combo Netflix + HBO"
+  },
+  {
+    "codigo": 1046,
+    "tipo": "Duo",
+    "nombre": "Netflix + Disney",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + Disney"
+  },
+  {
+    "codigo": 1047,
+    "tipo": "Duo",
+    "nombre": "Netflix + Paramount",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + Paramount"
+  },
+  {
+    "codigo": 1048,
+    "tipo": "Duo",
+    "nombre": "Netflix + Prime Video",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + Prime Video"
+  },
+  {
+    "codigo": 1049,
+    "tipo": "Duo",
+    "nombre": "Disney + Prime Video",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Disney + Prime Video"
+  },
+  {
+    "codigo": 1050,
+    "tipo": "Duo",
+    "nombre": "Disney + Crunchyroll",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Disney + Crunchyroll"
+  },
+  {
+    "codigo": 1051,
+    "tipo": "Duo",
+    "nombre": "Disney + Paramount",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Disney + Paramount"
+  },
+  {
+    "codigo": 1052,
+    "tipo": "Duo",
+    "nombre": "Disney + HBO",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Disney + HBO"
+  },
+  {
+    "codigo": 1053,
+    "tipo": "Duo",
+    "nombre": "HBO + Prime Video",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo HBO + Prime Video"
+  },
+  {
+    "codigo": 1054,
+    "tipo": "Duo",
+    "nombre": "HBO + Paramount",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo HBO + Paramount"
+  },
+  {
+    "codigo": 1055,
+    "tipo": "Duo",
+    "nombre": "Paramount + Prime Video",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Paramount + Prime Video"
+  },
+  {
+    "codigo": 1056,
+    "tipo": "Duo",
+    "nombre": "Paramount + Crunchyroll",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Paramount + Crunchyroll"
+  },
+  {
+    "codigo": 1057,
+    "tipo": "Duo",
+    "nombre": "Paramount + Vix",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Paramount + Vix"
+  },
+  {
+    "codigo": 1058,
+    "tipo": "Duo",
+    "nombre": "Prime Video + Crunchyroll",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Prime Video + Crunchyroll"
+  },
+  {
+    "codigo": 1059,
+    "tipo": "Duo",
+    "nombre": "Prime + Vix",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Prime + Vix"
+  },
+  {
+    "codigo": 1060,
+    "tipo": "Duo",
+    "nombre": "VIX + Crunchyroll",
+    "precio": "$16.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo VIX + Crunchyroll"
+  },
+  {
+    "codigo": 1061,
+    "tipo": "Trio",
+    "nombre": "Netflix + Disney + Prime Video",
+    "precio": "$22.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + Disney + Prime Video"
+  },
+  {
+    "codigo": 1062,
+    "tipo": "Trio",
+    "nombre": "Netflix + Disney + HBO",
+    "precio": "$22.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + Disney + HBO"
+  },
+  {
+    "codigo": 1063,
+    "tipo": "Trio",
+    "nombre": "Netflix + Prime + HBO",
+    "precio": "$22.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + Prime + HBO"
+  },
+  {
+    "codigo": 1064,
+    "tipo": "Trio",
+    "nombre": "Netflix + Prime + Disney",
+    "precio": "$22.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + Prime + Disney"
+  },
+  {
+    "codigo": 1065,
+    "tipo": "Trio",
+    "nombre": "Netflix + Prime + Paramount",
+    "precio": "$22.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + Prime + Paramount"
+  },
+  {
+    "codigo": 1066,
+    "tipo": "Trio",
+    "nombre": "Netflix + HBO + Paramount",
+    "precio": "$22.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + HBO + Paramount"
+  },
+  {
+    "codigo": 1067,
+    "tipo": "Trio",
+    "nombre": "Netflix + Disney + Paramount",
+    "precio": "$22.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el combo Netflix + Disney + Paramount"
+  },
+  {
+    "codigo": 1068,
+    "tipo": "Super Pack",
+    "nombre": "Netflix + Disney + Paramount + HBO",
+    "precio": "$24.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el Super Pack Netflix + Disney + Paramount + HBO"
+  },
+  {
+    "codigo": 1069,
+    "tipo": "Super Pack",
+    "nombre": "Netflix + Disney + Paramount + Prime",
+    "precio": "$24.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el Super Pack Netflix + Disney + Paramount + Prime"
+  },
+  {
+    "codigo": 1070,
+    "tipo": "Mega Pack",
+    "nombre": "Netflix + Disney + Vix + Prime + Crunchyroll",
+    "precio": "$26.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el Mega Pack Netflix + Disney + Vix + Prime + Crunchyroll"
+  },
+  {
+    "codigo": 1071,
+    "tipo": "Mega Pack",
+    "nombre": "Netflix + Disney + Paramount + Prime + HBO",
+    "precio": "$26.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el Mega Pack Netflix + Disney + Paramount + Prime + HBO"
+  },
+  {
+    "codigo": 1072,
+    "tipo": "Combo Definitivo",
+    "nombre": "Netflix Original + Disney Premium + Paramount Plus + Prime Original + HBO Platino + Crunchyroll Mega Fan + VIX + Plex",
+    "precio": "$56.900",
+    "imagen": "img/combo.png",
+    "mensaje": "Hola, me interesa el Combo Definitivo con todos los servicios"
+  },
+  {
+    "codigo": 1073,
+    "tipo": "Completa",
+    "nombre": "Office 365 12 meses (1 Dispositivo)",
+    "precio": "$22.900",
+    "imagen": "img/office.png",
+    "mensaje": "Hola, me interesa Office 365 por 12 meses para 1 dispositivo"
+  },
+  {
+    "codigo": 1074,
+    "tipo": "Completa",
+    "nombre": "Office 365 12 meses (5 Dispositivos)",
+    "precio": "$45.000",
+    "imagen": "img/office.png",
+    "mensaje": "Hola, me interesa Office 365 por 12 meses para 5 dispositivos"
+  },
+  {
+    "codigo": 1075,
+    "tipo": "Completa",
+    "nombre": "Xvideos",
+    "precio": "$14.900",
+    "imagen": "img/xvideos.png",
+    "mensaje": "Hola, me interesa la cuenta Xvideos"
+  },
+  {
+    "codigo": 1076,
+    "tipo": "Completa",
+    "nombre": "Gemini IA",
+    "precio": "$15.000",
+    "imagen": "img/gemini.png",
+    "mensaje": "Hola, me interesa Gemini IA"
+  },
+  {
+    "codigo": 1077,
+    "tipo": "Completa",
+    "nombre": "PornHub",
+    "precio": "$10.900",
+    "imagen": "img/pornhub.png",
+    "mensaje": "Hola, me interesa la cuenta PornHub"
+  },
+  {
+    "codigo": 1078,
+    "tipo": "Completa",
+    "nombre": "PornHub Completa",
+    "precio": "$14.900",
+    "imagen": "img/pornhub.png",
+    "mensaje": "Hola, me interesa la cuenta PornHub Completa"
+  },
+  {
+    "codigo": 1079,
+    "tipo": "Completa",
+    "nombre": "Apple Tv",
+    "precio": "$10.900",
+    "imagen": "img/apple.png",
+    "mensaje": "Hola, me interesa la cuenta Apple TV"
+  },
+  {
+    "codigo": 1080,
+    "tipo": "Completa",
+    "nombre": "Apple Tv 3 Meses",
+    "precio": "$18.900",
+    "imagen": "img/apple.png",
+    "mensaje": "Hola, me interesa Apple TV por 3 meses"
+  },
+  {
+    "codigo": 1081,
+    "tipo": "Completa",
+    "nombre": "IPTV 3 Dispositivos",
+    "precio": "$15.000",
+    "imagen": "img/iptv.svg",
+    "mensaje": "Hola, me interesa IPTV para 3 dispositivos"
+  },
+  {
+    "codigo": 1082,
+    "tipo": "Individual",
+    "nombre": "IPTV Pantalla",
+    "precio": "$10.000",
+    "imagen": "img/iptv.svg",
+    "mensaje": "Hola, me interesa IPTV por pantalla"
+  },
+  {
+    "codigo": 1083,
+    "tipo": "Audio",
+    "nombre": "Spotify 1 Mes",
+    "precio": "$10.900",
+    "imagen": "img/spotify.svg",
+    "mensaje": "Hola, me interesa Spotify por 1 mes"
+  },
+  {
+    "codigo": 1084,
+    "tipo": "Audio",
+    "nombre": "Spotify 2 Meses",
+    "precio": "$20.900",
+    "imagen": "img/spotify.svg",
+    "mensaje": "Hola, me interesa Spotify por 2 meses"
+  },
+  {
+    "codigo": 1085,
+    "tipo": "Completa",
+    "nombre": "DirecTV Go + WIN",
+    "precio": "$24.900",
+    "imagen": "img/directv.png",
+    "mensaje": "Hola, me interesa DirecTV Go + WIN"
+  },
+  {
+    "codigo": 1086,
+    "tipo": "Web",
+    "nombre": "Canva",
+    "precio": "$10.000",
+    "imagen": "img/canva.svg",
+    "mensaje": "Hola, me interesa Canva Pro"
+  },
+  {
+    "codigo": 1087,
+    "tipo": "App",
+    "nombre": "Capcut 1 Dispositivo",
+    "precio": "$15.000",
+    "imagen": "img/capcut.png",
+    "mensaje": "Hola, me interesa Capcut para 1 dispositivo"
+  },
+  {
+    "codigo": 1088,
+    "tipo": "App",
+    "nombre": "Capcut Pro",
+    "precio": "$28.000",
+    "imagen": "img/capcut.png",
+    "mensaje": "Hola, me interesa Capcut Pro"
+  },
+  {
+    "codigo": 1089,
+    "tipo": "App",
+    "nombre": "Duolingo",
+    "precio": "$12.000",
+    "imagen": "img/duolingo.png",
+    "mensaje": "Hola, me interesa Duolingo Plus"
+  },
+  {
+    "codigo": 1090,
+    "tipo": "Completa",
+    "nombre": "Curso de ingles",
+    "precio": "$20.000",
+    "imagen": "img/ingles.png",
+    "mensaje": "Hola, me interesa el curso de inglés"
+  },
+  {
+    "codigo": 1091,
+    "tipo": "App",
+    "nombre": "Pics Arts",
+    "precio": "$8.900",
+    "imagen": "img/picsarts.png",
+    "mensaje": "Hola, me interesa Pics Arts Premium"
+  },
+  {
+    "codigo": 1092,
+    "tipo": "Completa",
+    "nombre": "PLEX Completa",
+    "precio": "$15.000",
+    "imagen": "img/plex.svg",
+    "mensaje": "Hola, me interesa Plex Completa"
+  },
+  {
+    "codigo": 1093,
+    "tipo": "Individual",
+    "nombre": "PLEX Pantalla",
+    "precio": "$10.000",
+    "imagen": "img/plex.svg",
+    "mensaje": "Hola, me interesa Plex por pantalla"
+  },
+  {
+    "codigo": 1094,
+    "tipo": "Completa",
+    "nombre": "Rakuten VIKI Cuenta",
+    "precio": "$10.000",
+    "imagen": "img/viki.png",
+    "mensaje": "Hola, me interesa Rakuten VIKI Cuenta"
+  },
+  {
+    "codigo": 1095,
+    "tipo": "Individual",
+    "nombre": "Rakuten VIKI Pantalla",
+    "precio": "$7.000",
+    "imagen": "img/viki.png",
+    "mensaje": "Hola, me interesa Rakuten VIKI por pantalla"
+  },
+  {
+    "codigo": 1096,
+    "tipo": "Completa",
+    "nombre": "VIX Cuenta",
+    "precio": "$12.900",
+    "imagen": "img/vix.svg",
+    "mensaje": "Hola, me interesa VIX Cuenta"
+  },
+  {
+    "codigo": 1097,
+    "tipo": "Individual",
+    "nombre": "VIX Pantalla",
+    "precio": "$8.900",
+    "imagen": "img/vix.svg",
+    "mensaje": "Hola, me interesa VIX por pantalla"
+  }
+]
