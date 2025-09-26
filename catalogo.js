@@ -7,10 +7,6 @@ const busqueda = document.getElementById('busqueda');
 const menuToggle = document.getElementById('menuToggle');
 const menuCategorias = document.getElementById('menuCategorias');
 
-// Banner containers (ya están en el HTML)
-const bannerTop = document.querySelectorAll('.banner-native')[0];
-const bannerBottom = document.querySelectorAll('.banner-native')[1];
-
 let productos = [];
 let tipoActivo = 'Todos';
 
@@ -27,7 +23,6 @@ fetch(rutaCatalogo)
   .then(data => {
     productos = data;
     renderizarCatalogo();
-    insertarBanners();
   })
   .catch(err => {
     console.error('Error al cargar el catálogo:', err);
@@ -52,7 +47,7 @@ function renderizarCatalogo() {
     return coincideTipo && coincideTexto;
   });
 
-  // Eliminar solo tarjetas, no banners
+  // Eliminar solo tarjetas, no banners ni otros elementos
   catalogo.querySelectorAll('.item').forEach(el => {
     el.classList.add('fade-out');
     setTimeout(() => el.remove(), 200);
@@ -64,7 +59,7 @@ function renderizarCatalogo() {
       return;
     }
 
-    filtrados.forEach((p, i) => {
+    filtrados.forEach(p => {
       const item = document.createElement('article');
       item.className = 'item fade-in';
       item.setAttribute('itemscope', '');
