@@ -291,7 +291,7 @@
     "codigo": 1045,
     "tipo": "Duo",
     "nombre": "Netflix + HBO",
-    "imagen": "img/netflix_hbo.png",
+    "imagen": ["img/netflix.png", "img/hbo.png"],
     "mensaje": "Hola, me interesa el combo Netflix + HBO",
     "precios": {
       "cliente": "10.800",
@@ -303,7 +303,7 @@
     "codigo": 1046,
     "tipo": "Duo",
     "nombre": "Netflix + Disney",
-    "imagen": "img/netflix_disney.png",
+    "imagen": "img/netflix.png",
     "mensaje": "Hola, me interesa el combo Netflix + Disney",
     "precios": {
       "cliente": "10.800",
@@ -614,7 +614,7 @@
   {
     "codigo": 1072,
     "tipo": "Combo Definitivo",
-    "nombre": "Combo definitivo",
+    "nombre": "Netflix Original + Disney Premium + Paramount Plus + Prime Original + HBO Platino + Crunchyroll Mega Fan + VIX + Plex",
     "imagen": "img/combo_definitivo.png",
     "mensaje": "Hola, me interesa el Combo Definitivo con todas las plataformas",
     "precios": {

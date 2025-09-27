@@ -87,6 +87,16 @@ let tipoActivo = 'Todos';
   }
 })();
 
+// 🧠 Generar logos desde nombre del producto, priorizando SVG
+function generarLogosDesdeNombre(nombre) {
+  const plataformas = nombre.split('+').map(p => {
+    const primeraPalabra = p.trim().split(' ')[0].toLowerCase();
+    const base = primeraPalabra.replace(/\s+/g, '_');
+    return [`img/${base}.svg`, `img/${base}.png`]; // intenta SVG primero, luego PNG
+  });
+  return plataformas.flat();
+}
+
 // 🔎 Normalizar texto para búsqueda
 const normalizar = str =>
   str.toLowerCase()
@@ -164,13 +174,16 @@ function renderizarCatalogo() {
         preciosHTML = `<p><strong>Sugerido:</strong> $${p.precios?.sugerido || 'Consultar'}</p>`;
       }
 
+      const imagenes = generarLogosDesdeNombre(p.nombre);
+      const imagenesHTML = `<div class="combo-imagenes">${imagenes.map(src => `<img src="${src}" alt="${p.nombre}" onerror="this.style.display='none'">`).join('')}</div>`;
+
       const item = document.createElement('article');
       item.className = 'item fade-in';
       item.setAttribute('itemscope', '');
       item.setAttribute('itemtype', 'https://schema.org/Product');
 
       item.innerHTML = `
-        <img src="${p.imagen}" alt="${p.nombre}" itemprop="image" />
+        ${imagenesHTML}
         <h2 itemprop="name">${p.nombre}</h2>
         ${preciosHTML}
         <div class="cta">

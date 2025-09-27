@@ -298,6 +298,47 @@ img {
   height: auto;
 }
 
+.individual-logo {
+  border-radius: 12px;
+  box-shadow: 10px 10px 10px #00f0ff33;
+  width: 100%;
+  height: auto;
+}
+
+.combo-imagenes {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.combo-imagenes img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+.combo-imagenes {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.combo-imagenes img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
 .item h2 {
   font-size: 1.2rem;
   color: #00f0ff;
